@@ -1,6 +1,8 @@
-. ./request.sh
-. ./login.sh
-. ./change-txt.sh
+base=`dirname $0`
+
+. $base/lib/request.sh
+. $base/lib/login.sh
+. $base/lib/change-txt.sh
 
 export DEBUG=false
 
