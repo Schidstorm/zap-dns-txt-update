@@ -14,7 +14,9 @@ opt_txtId=""
 opt_txtValue=""
 
 function usage() {
-    u=<< EOL
+    tee << EOL
+A tool for changing the TXT record of a domain from ZAP-Hosting
+
 $(basename $0) -u username -p password --did domainId -n txtName --tid txtId txtValue
 EOL
 }
@@ -22,7 +24,7 @@ EOL
 while true; do
     arg="$1"
     case "$arg" in 
-        -h|--help) usage; exit ;;
+        -h|--help) echo "`usage`"; exit ;;
         -u*) opt_username="${arg:2}"; shift ;;
         -u|--username)  opt_username="$2"; shift 2 ;;
         -p*) opt_password="${arg:2}"; shift ;;
