@@ -39,3 +39,4 @@ done
 
 login "$opt_username" "$opt_password"
 changeTxt "$opt_domainId" "$opt_txtName" "$opt_txtId" "$opt_txtValue"
+rm -f cookie-jar.txt
